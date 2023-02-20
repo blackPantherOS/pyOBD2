@@ -1,0 +1,12 @@
+[Desktop Entry]
+Icon=/usr/share/pyobd/pyobd2.png
+Name=pyOBD2 Diagnostics
+Comment=Car On-Board 2 diagnostics (ELM-32x compatible interface)
+Comment[hu]=ELM-32x kompatibilis diagnosztika
+GenericName=Car On-Board 2 diagnostics (ELM-32x compatible interface)
+GenericName[hu]=ELM-32x kompatibilis diagnosztika
+Exec=/usr/bin/pyobd2
+Terminal=false
+Type=Application
+Categories=Utility;
+StartupNotify=true
