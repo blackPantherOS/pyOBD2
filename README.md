@@ -2,7 +2,7 @@ pyOBD2
 =====
 Is a OBD-II compliant car diagnostic tool.
 It is designed to interface with low-cost ELM 32x OBD-II diagnostic interfaces such as ELM-USB. It will basically allow you to talk to your car's ECU,... display fault codes, display measured values, read status tests, etc. All cars made since 1996 (in the US) or 2001 (in the EU) must be OBD-II compliant, i.e. they should work with pyOBD.
-pyOBD is written entirely in Python3 and was originally written by Donour Sizemore, now maintained and improved by SECONS Ltd. and forked here.  It is Free Software and is distributed under the terms of the GPL.
+pyOBD is written entirely in Python and was originally written by Donour Sizemore, now maintained and improved by SECONS Ltd. and forked here.  It is Free Software and is distributed under the terms of the GPL.
 (Old Python2 version http://www.obdtester.com/pyobd)
 
 ### General OBD-II information
@@ -11,17 +11,29 @@ For Python devlopers, pyOBD provides a single module, obd_io, that allows high l
 
 ### Requirements
 An ELM 32x OBD-II interface
-Python 3.x or greater
+Python 3.x or greater (tested on python3.11)
 python3-serial
-wxWidgets 3.x
+wx with PyEvent (ex. wxpython4)
 A car supporting OBD-II
 
 ### Quick Start on Linux
+# under blackPanther OS
+
+```bash
+ usermod -a -G dialout [your_user_name]
+ installing python3-wxpython4
+ git clone https://github.com/blackPantherOS/pyOBD2
+ cd pyOBD2
+./pyobd2
+```
+
+# Debian based
+
 ```bash
 sudo usermod -a -G dialout [your_user_name]
-sudo apt-get install python-wxgtk2.8
-git clone https://github.com/chethenry/pyOBD
-cd pyOBD
+sudo apt-get install python3-wxpython4
+git clone https://github.com/blackPantherOS/pyOBD2
+cd pyOBD2
 ./pyobd2
 ```
 

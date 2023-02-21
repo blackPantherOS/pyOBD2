@@ -10,7 +10,7 @@ Name: 		%name
 Summary: 	%Summary
 Summary(hu): 	%Summary_hu
 Version:	%version
-Release:  	%mkrel 1
+Release:  	%mkrel 2
 License: 	GPL2
 Distribution:	blackPanther OS
 Vendor:    	blackPanther Europe
@@ -19,7 +19,7 @@ Group: 		Utility
 Source0:	%name-%version.%sourcetype
 BuildArch:	noarch
 BuildRequires:	python3
-Requires: 	python3 wxgtk 
+Requires: 	python3-wxpython4
 Requires: 	python3-serial 
 Requires: 	python3-configparser
 
@@ -68,6 +68,10 @@ install -m644 pyobd.desktop %{buildroot}%{_datadir}/applications/%name.desktop
 rm -rf %buildroot
 
 %changelog
+* Mon Feb 20 2023 Charles K. Barcza <info@blackpanther.hu> 20230220-2bP
+- build package for blackPanther OS v22.x 32/64 bit or ARM
+- fix dependency
+------------------------------------------------------------------------
 * Mon Feb 20 2023 Charles K. Barcza <info@blackpanther.hu> 20230220-1bP
 - build package for blackPanther OS v22.x 32/64 bit or ARM
 ------------------------------------------------------------------------
