@@ -143,12 +143,12 @@ class OBDPort:
              self.port.flushInput()
              for c in cmd:
                  try:
-                     self.port.write(c)
+                     self.port.write(c.encode())
                  except:
                      pass
                  #print ("CMD", c)
              try:
-                 self.port.write("\r\n")
+                 self.port.write("\r\n".encode())
                  wx.PostEvent(self._notify_window, DebugEvent([3,"Send command:" + cmd]))
              except:
                   pass
